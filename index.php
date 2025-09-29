@@ -78,8 +78,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <h3>Employee details</h3>
 		<br>
 
-        <strong>Employee Name:</strong>
-        <?php echo htmlspecialchars($employee_name); ?>
+        <strong>Employee Name:</strong> <br>
+        <?php echo htmlspecialchars($employee_name); ?> <br>
 
         <strong>Hour/s Worked:</strong>
         <div><?php echo number_format((float)$hours_worked); ?> hour/s</div>
