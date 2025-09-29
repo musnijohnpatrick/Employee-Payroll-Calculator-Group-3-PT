@@ -31,12 +31,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $regularPay = $regularHours * $hourlyRate;
             $overtime_hours = $hours_worked - 40;
             $overtime_pay = $overtime_hours * ($hourlyRate * 1.5);
-            $total_pay = $regularPay + $overtime_pay;
+            $total_pay = (40 * $hourlyRate) + $overtime_pay;
         } else {
-            $regularHours = $hours_worked;
-            $regularPay = $basicPay;
-            $overtime_hours = 0;
-            $overtime_pay = 0.0;
+          
             $total_pay = $basicPay;
         }
         $calculated = true;
